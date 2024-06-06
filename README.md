@@ -1,4 +1,8 @@
 The app is hosted on vercel.
+https://frontend-intern-assignment-omega.vercel.app/
+
+
+### `cd book-shelf`
 
 
 In the project directory, you can run:
