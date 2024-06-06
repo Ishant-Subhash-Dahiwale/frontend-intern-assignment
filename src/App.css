@@ -1,38 +1,117 @@
-.App {
+/* App.css */
+body {
+  font-family: Arial, sans-serif;
   text-align: center;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header {
+  margin-bottom: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 15px;
+  background-color: #007BFF;
+  color: white;
+  margin-right: 10px;
+}
+
+.bookshelf-button {
+  background-color: #28a745;
+}
+
+.bookshelf-button:hover,
+button:hover {
+  background-color: #28af45;
+}
+
+.book-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.book-card {
+  height: 250px;
+  background: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px;
+  width: 200px;
+  box-shadow: none;
+}
+
+.book-info {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.book-title {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+  text-align: left;
+  align-items: baseline; /* Align items to the bottom */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.book-title-text {
+  display: block; /* Ensure the text can wrap */
+  margin-top: 0;
+}
+
+.book-card p {
+  margin-top: 50px;
+  padding: 0;
+  text-align: left;
+}
+
+.book-card button {
+  background-color: #28a745;
+}
+
+.book-card button:hover {
+  background-color: #218838;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .book-card {
+    width: calc(100% - 20px); /* Full width on smaller screens */
   }
-  to {
-    transform: rotate(360deg);
+
+  .container {
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .header {
+    margin-bottom: 10px; /* Adjust margin for smaller screens */
+  }
+
+  input[type="text"],
+  button {
+    width: 100%; /* Full width input and button on smaller screens */
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .book-list {
+    flex-direction: column; /* Stack book cards vertically */
   }
 }
